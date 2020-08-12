@@ -1,6 +1,17 @@
 backend:
   name: github
-  repo: <github_name>/<repo_name> # e.g. ateagit/personal-website
+  repo: Frosty273/Personal-Website # e.g. ateagit/personal-website
 
 media_folder: static/assets
 public_folder: /assets
+
+collections:
+  - name: blog
+    label: Blog
+    folder: blog
+    create: true
+    fields:
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: author, label: Author }
+      - { name: body, label: Body, widget: markdown }
